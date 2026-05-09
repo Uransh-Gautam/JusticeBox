@@ -1,5 +1,6 @@
 const API_KEY = import.meta.env.VITE_AI_API_KEY;
 
+// ai se complaint analyze karwane wala function
 export async function analyzeComplaint(complaintText) {
   if (!API_KEY) {
     throw new Error("API Key is missing. Please check your .env.local file.");
@@ -36,7 +37,7 @@ export async function analyzeComplaint(complaintText) {
     const data = await response.json();
     const content = data.choices[0].message.content;
     
-    // Parse the JSON. Groq's JSON mode is quite reliable.
+    // json parse karke return kar denge (groq ka json mode badhiya chal rha hai)
     return JSON.parse(content);
   } catch (error) {
     console.error("Failed to analyze complaint with Groq:", error);

@@ -31,8 +31,4 @@
     background-color: rgba(99, 102, 241, 0.35);
     border-radius: 9999px;
   }
-
-  .text-shadow-soft {
-    text-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-  }
 }

@@ -2,18 +2,10 @@ import React from 'react';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white py-4 px-8 shadow-sm transition-all duration-300">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white py-4 px-8 transition-all duration-300">
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between max-w-[1440px] mx-auto">
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#fd761a] text-white">
-              <div className="grid grid-cols-2 gap-0.5">
-                <div className="w-2 h-2 bg-white rounded-sm"></div>
-                <div className="w-2 h-2 bg-white rounded-sm"></div>
-                <div className="w-2 h-2 bg-white/80 rounded-sm"></div>
-                <div className="w-2 h-2 bg-white/60 rounded-sm"></div>
-              </div>
-            </div>
             <div className="font-bold text-2xl text-slate-900 leading-none">JusticeBox</div>
           </div>
         </div>
