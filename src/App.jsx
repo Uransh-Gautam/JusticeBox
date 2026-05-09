@@ -28,15 +28,12 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.16),_transparent_22%),radial-gradient(circle_at_bottom_right,_rgba(251,146,60,0.16),_transparent_24%),linear-gradient(180deg,#f8fafc_0%,#eff6ff_45%,#fff7ed_100%)] text-slate-950 font-body-md selection:bg-secondary-container/20 selection:text-secondary-container">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-96 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.22),_transparent_35%)] blur-3xl"></div>
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-72 bg-[radial-gradient(circle_at_bottom,_rgba(251,146,60,0.18),_transparent_42%)] blur-3xl"></div>
+    <div className="min-h-screen flex flex-col relative bg-[#f7f9fb] text-slate-900 font-body-md selection:bg-[#fd761a]/20 selection:text-[#fd761a]">
 
       <Header />
 
-      <main className="relative z-10 flex-grow flex flex-col items-center w-full max-w-[1440px] mx-auto px-container-padding py-xl gap-xl">
-        <section className="w-full max-w-4xl rounded-[2rem] border border-white/70 bg-white/75 backdrop-blur-2xl shadow-[0_40px_120px_-60px_rgba(59,130,246,0.28)] p-xl mb-4 overflow-hidden">
-          <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-gradient-to-br from-secondary-container/20 to-transparent blur-3xl pointer-events-none"></div>
+      <main className="relative z-10 flex-grow flex flex-col items-center w-full max-w-[1440px] mx-auto px-8 py-8 gap-6">
+        <section className="w-full bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 relative">
             <div className="max-w-2xl">
               <p className="inline-flex items-center gap-2 rounded-full bg-secondary-container/10 px-4 py-2 text-secondary-container font-semibold text-body-sm mb-4 shadow-sm">
@@ -58,7 +55,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="w-full max-w-3xl bg-white/80 backdrop-blur-2xl rounded-[2rem] border border-slate-200/70 p-xl shadow-[0_28px_80px_-40px_rgba(15,23,42,0.18)]">
+        <section className="w-full bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
           <div className="flex flex-col gap-4 text-center">
             <span className="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-4 py-2 text-body-sm font-semibold shadow-sm">Legal confidence meets fast clarity</span>
             <h1 className="font-h1 text-h1 text-slate-950 tracking-tight">What happened?</h1>
@@ -87,9 +84,8 @@ export default function App() {
             <button
               onClick={handleAnalyze}
               disabled={loading || !complaint.trim()}
-              className="relative overflow-hidden rounded-full bg-gradient-to-r from-secondary-container to-primary px-6 py-4 text-white font-cta text-cta shadow-lg shadow-secondary-container/20 transition duration-300 hover:scale-[1.01] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
+              className="relative overflow-hidden rounded-xl bg-[#fd761a] px-6 py-4 text-white font-medium text-base shadow-sm transition duration-300 hover:bg-[#e86a16] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
             >
-              <span className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
               <div className="relative flex items-center justify-center gap-3">
                 {loading ? (
                   <>
@@ -109,9 +105,8 @@ export default function App() {
 
         <ResultsSection result={result} />
 
-        <div className="w-full grid grid-cols-1 gap-8 xl:grid-cols-[1.2fr_0.8fr] mt-8">
-          <section className="relative overflow-hidden rounded-[2rem] border border-slate-200/60 bg-white/85 p-8 shadow-[0_24px_75px_-40px_rgba(15,23,42,0.18)]">
-            <div className="absolute -top-20 -right-20 h-56 w-56 rounded-full bg-gradient-to-br from-secondary-container/15 to-transparent blur-3xl" />
+        <div className="w-full grid grid-cols-1 gap-6 xl:grid-cols-[1.2fr_0.8fr] mt-2">
+          <section className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
             <div className="relative z-10 flex flex-col gap-4">
               <div>
                 <h2 className="font-h3 text-h3 text-slate-950 flex items-center gap-3">

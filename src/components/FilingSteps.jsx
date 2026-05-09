@@ -8,28 +8,27 @@ const steps = [
 
 export default function FilingSteps() {
   return (
-    <section className="relative overflow-hidden rounded-[2rem] border border-slate-200/70 bg-white/90 p-8 shadow-[0_25px_65px_-35px_rgba(15,23,42,0.18)]">
-      <div className="absolute -top-16 -right-16 h-52 w-52 rounded-full bg-secondary-container/15 blur-3xl pointer-events-none" />
+    <section className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
       <div className="relative z-10 flex flex-col gap-6">
         <div>
           <h2 className="font-h3 text-h3 text-slate-950 flex items-center gap-3">
-            <span className="material-symbols-outlined text-secondary-container">assignment</span>
+            <span className="material-symbols-outlined text-[#fd761a]">assignment</span>
             How to File
           </h2>
-          <p className="mt-2 text-body-sm text-slate-600">A simplified guide to the legal process.</p>
+          <p className="mt-2 text-sm text-slate-500">A simplified guide to the legal process.</p>
         </div>
-        <div className="space-y-5">
-          {steps.map((step, index) => (
-            <div key={step.id} className="flex gap-4 rounded-[1.75rem] border border-slate-200/70 bg-slate-50 px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-secondary-container/70">
-              <div className="flex h-14 w-14 items-center justify-center rounded-3xl border border-slate-200 bg-white text-slate-900 shadow-sm">
-                <span className="font-mono-label text-mono-label">{step.id}</span>
+        <div className="space-y-4">
+          {steps.map((step) => (
+            <div key={step.id} className="flex gap-4 rounded-xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition hover:border-[#fd761a]/50">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-slate-50 text-slate-700">
+                <span className="font-bold text-lg">{step.id}</span>
               </div>
               <div className="flex-1">
-                <div className="flex items-center gap-2 text-slate-950">
-                  <h3 className="font-cta text-cta">{step.title}</h3>
-                  <span className="material-symbols-outlined text-secondary-container">{step.icon}</span>
+                <div className="flex items-center gap-2 text-slate-900">
+                  <h3 className="font-medium text-base">{step.title}</h3>
+                  <span className="material-symbols-outlined text-[#fd761a] text-[20px]">{step.icon}</span>
                 </div>
-                <p className="mt-2 text-body-sm text-slate-600 leading-relaxed">{step.desc}</p>
+                <p className="mt-1 text-sm text-slate-500 leading-relaxed">{step.desc}</p>
               </div>
             </div>
           ))}
