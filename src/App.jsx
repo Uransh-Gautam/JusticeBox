@@ -28,7 +28,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col relative bg-[#f7f9fb] text-slate-900 font-body-md selection:bg-[#fd761a]/20 selection:text-[#fd761a]">
+    <div className="min-h-screen flex flex-col relative bg-slate-100 text-slate-900 font-body-md selection:bg-[#fd761a]/20 selection:text-[#fd761a]">
 
       <Header />
 
@@ -36,42 +36,41 @@ export default function App() {
         <section className="w-full bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 relative">
             <div className="max-w-2xl">
-              <p className="inline-flex items-center gap-2 rounded-full bg-secondary-container/10 px-4 py-2 text-secondary-container font-semibold text-body-sm mb-4 shadow-sm">
-                <span className="w-2.5 h-2.5 rounded-full bg-secondary-container animate-pulse"></span>
+              <div className="inline-flex items-center gap-2 rounded-lg bg-[#ff9966] px-4 py-1.5 text-white font-semibold text-sm mb-6 shadow-sm">
+                <span className="material-symbols-outlined text-[18px]">bolt</span>
                 Smart consumer complaint generator
-              </p>
+              </div>
               <h2 className="font-h1 text-h1 text-slate-950 tracking-tight">Build a strong legal notice in minutes</h2>
               <p className="mt-4 font-body-lg text-on-surface-variant leading-relaxed">
                 JusticeBox converts your case details into professional notice language, provides jurisdiction guidance, and makes filing easier.
               </p>
             </div>
-            <div className="rounded-[2rem] bg-gradient-to-br from-slate-950 via-slate-800 to-indigo-600 p-6 text-white shadow-[0_25px_75px_-35px_rgba(15,23,42,0.65)] max-w-sm w-full">
-              <p className="font-body-sm uppercase tracking-[0.18em] text-slate-200/85">Ready to file?</p>
-              <p className="font-h2 text-[2rem] mt-3">3 min setup</p>
-              <p className="mt-3 text-body-sm text-slate-200/80 leading-relaxed">
+            <div className="rounded-2xl bg-[#e6f2ff] border border-[#cce4ff] p-6 text-slate-800 shadow-sm max-w-sm w-full flex flex-col justify-center">
+              <p className="font-semibold uppercase tracking-wider text-slate-500 text-xs">Ready to file?</p>
+              <p className="font-bold text-2xl mt-2 text-slate-900">3 min setup</p>
+              <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                 Describe your issue and get a polished notice with a jurisdiction recommendation.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="w-full bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+        <section className="w-full max-w-3xl bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
           <div className="flex flex-col gap-4 text-center">
-            <span className="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-4 py-2 text-body-sm font-semibold shadow-sm">Legal confidence meets fast clarity</span>
-            <h1 className="font-h1 text-h1 text-slate-950 tracking-tight">What happened?</h1>
-            <p className="mx-auto max-w-2xl font-body-lg text-on-surface-variant leading-relaxed">
+            <h1 className="font-h1 text-3xl font-bold text-slate-900 tracking-tight">What happened?</h1>
+            <p className="mx-auto max-w-xl text-slate-600 leading-relaxed">
               Describe your experience and our assistant will craft a strong complaint draft for the correct consumer forum.
             </p>
           </div>
 
-          <div className="mt-10 flex flex-col gap-6">
+          <div className="mt-8 flex flex-col gap-5">
             <textarea
-              className="w-full min-h-[170px] rounded-3xl border border-slate-300/70 bg-slate-50/90 p-5 text-body-md text-slate-900 shadow-inner focus:border-secondary-container focus:bg-white focus:ring-4 focus:ring-secondary-container/10 transition-all duration-300 resize-none placeholder:text-slate-400 custom-scrollbar"
+              className="w-full min-h-[120px] rounded-xl border border-slate-300 bg-slate-50 p-4 text-slate-900 shadow-inner focus:border-[#fd761a] focus:bg-white focus:ring-2 focus:ring-[#fd761a]/20 transition-all duration-300 resize-none placeholder:text-slate-400 custom-scrollbar"
               id="complaint-input"
               value={complaint}
               onChange={(e) => setComplaint(e.target.value)}
               placeholder="E.g., Swiggy delivered my food 2 hours late, cold, and customer support refused a refund..."
-              rows={6}
+              rows={4}
             />
 
             {error && (
