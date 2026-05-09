@@ -2,16 +2,17 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="bg-surface/80 backdrop-blur-sm border-t border-outline-variant/30 w-full mt-auto py-lg px-container-padding transition-colors duration-300">
-      <div className="flex flex-col md:flex-row justify-between items-center max-w-[1440px] mx-auto gap-md">
-        <div className="font-body-sm text-body-sm text-on-surface-variant text-center md:text-left flex items-center gap-2">
-          <span className="material-symbols-outlined text-[18px]">copyright</span>
+    <footer className="bg-slate-950/5 backdrop-blur-sm border-t border-slate-200/60 w-full mt-auto py-lg px-container-padding transition-colors duration-300">
+      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between max-w-[1440px] mx-auto">
+        <div className="flex items-center gap-2 text-body-sm text-slate-600 justify-center md:justify-start">
+          <span className="material-symbols-outlined text-[18px] text-secondary-container">copyright</span>
           2024 JusticeBox Consumer Rights Protection.
         </div>
-        <div className="flex gap-lg items-center">
+        <div className="flex flex-wrap justify-center gap-5 text-body-sm text-slate-600">
           {['Privacy Policy', 'Terms of Service', 'Contact Support'].map((item) => (
-            <a key={item} className="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary-container transition-colors relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-secondary-container after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left" href="#">
+            <a key={item} href="#" className="relative transition-colors duration-300 hover:text-secondary-container">
               {item}
+              <span className="absolute left-0 -bottom-1 h-[1px] w-full origin-left scale-x-0 bg-secondary-container transition-transform duration-300 group-hover:scale-x-100"></span>
             </a>
           ))}
         </div>
